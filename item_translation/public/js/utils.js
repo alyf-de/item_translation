@@ -1,4 +1,4 @@
- frappe.provide("item_translation"); //create namespace
+frappe.provide("item_translation"); //create namespace
 
 item_translation.utils = {
 	get_translated_description: async function (frm, cdt, cdn) {
@@ -26,7 +26,7 @@ item_translation.utils = {
 			}, 500);
 		}
 	},
-    refetch_all_translations: async function (frm) {
+	refetch_all_translations: async function (frm) {
 		// check if there are any items in item table
 		if (frm.doc.items.length == 0) {
 			return;

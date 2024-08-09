@@ -2,7 +2,7 @@ app_name = "item_translation"
 app_title = "Item Translation"
 app_publisher = "ALYF GmbH"
 app_description = (
-    "Create Translations for Item Descriptions and fetch them in Selling Transactions"
+	"Create Translations for Item Descriptions and fetch them in Selling Transactions"
 )
 app_email = "hallo@alyf.de"
 app_license = "gpl-3.0"
@@ -31,9 +31,9 @@ app_include_js = ["/assets/item_translation/js/utils.js"]
 
 # include js in doctype views
 doctype_js = {
-    "Quotation": "public/js/quotation.js",
-    "Sales Order": "public/js/sales_order.js",
-    "Sales Invoice": "public/js/sales_invoice.js",
+	"Quotation": "public/js/quotation.js",
+	"Sales Order": "public/js/sales_order.js",
+	"Sales Invoice": "public/js/sales_invoice.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -234,15 +234,15 @@ after_install = "item_translation.install.after_install"
 # }
 
 custom_records = [
-    {
-        "doctype": "DocType Link",
-        "custom": 1,
-        "group": "Description Translation",
-        "link_doctype": "Item Description Translation",
-        "link_fieldname": "item",
-        "name": "gknqets990",
-        "parent": "Item",
-        "parentfield": "links",
-        "parenttype": "Customize Form",
-    },
+	{
+		"doctype": "DocType Link",
+		"custom": 1,
+		"group": "Description Translation",
+		"link_doctype": "Item Description Translation",
+		"link_fieldname": "item",
+		"name": "gknqets990",
+		"parent": "Item",
+		"parentfield": "links",
+		"parenttype": "Customize Form",
+	},
 ]
