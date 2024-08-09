@@ -1,7 +1,9 @@
 app_name = "item_translation"
 app_title = "Item Translation"
 app_publisher = "ALYF GmbH"
-app_description = "Create Translations for Item Descriptions and fetch them in Selling Transactions"
+app_description = (
+    "Create Translations for Item Descriptions and fetch them in Selling Transactions"
+)
 app_email = "hallo@alyf.de"
 app_license = "gpl-3.0"
 # required_apps = []
@@ -11,7 +13,7 @@ app_license = "gpl-3.0"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/item_translation/css/item_translation.css"
-# app_include_js = "/assets/item_translation/js/item_translation.js"
+app_include_js = ["/assets/item_translation/js/utils.js"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/item_translation/css/item_translation.css"
@@ -28,7 +30,11 @@ app_license = "gpl-3.0"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Quotation": "public/js/quotation.js",
+    "Sales Order": "public/js/sales_order.js",
+    "Sales Invoice": "public/js/sales_invoice.js",
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -68,7 +74,7 @@ app_license = "gpl-3.0"
 # ------------
 
 # before_install = "item_translation.install.before_install"
-# after_install = "item_translation.install.after_install"
+after_install = "item_translation.install.after_install"
 
 # Uninstallation
 # ------------
@@ -227,3 +233,16 @@ app_license = "gpl-3.0"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+custom_records = [
+    {
+        "doctype": "DocType Link",
+        "custom": 1,
+        "group": "Description Translation",
+        "link_doctype": "Item Description Translation",
+        "link_fieldname": "item",
+        "name": "gknqets990",
+        "parent": "Item",
+        "parentfield": "links",
+        "parenttype": "Customize Form",
+    },
+]
