@@ -4,10 +4,10 @@ item_translation.utils = {
 	get_translated_description: async function (frm, cdt, cdn) {
 		const row = locals[cdt][cdn];
 		const lang = frm.doc.language;
-		const settings = await frappe.db.get_doc("Item Description Translation Settings");
+		const settings = await frappe.db.get_doc("Item Translation Settings");
 
 		if (settings.language != lang) {
-			const res = await frappe.db.get_list("Item Description Translation", {
+			const res = await frappe.db.get_list("Item Translation", {
 				fields: ["name", "language", "description"],
 				filters: { language: lang, item: row.item_code },
 				limit: 1,
@@ -18,8 +18,8 @@ item_translation.utils = {
 				} else if (settings.display_warnings === 1) {
 					frappe.msgprint(
 						__(
-							"Missing translation for language <b> {0} </b><br> Please change print language in customer or add <b>Item Description Translation</b>",
-							[lang]
+							"Translation missing for <b> {0} </b> in language <b> {1}</b> <br>. Please change print language in customer or add <b>Item Translation</b>",
+							[row.item_name, lang]
 						)
 					);
 				}
@@ -38,10 +38,10 @@ item_translation.utils = {
 			}
 		}
 		const lang = frm.doc.language;
-		const settings = await frappe.db.get_doc("Item Description Translation Settings");
+		const settings = await frappe.db.get_doc("Item Translation Settings");
 		frappe.confirm(
 			__(
-				"Print Language has changed. Refetch Item descriptions for language <b> {0} </b>?",
+				"Print Language has changed. Refetch Items for language <b> {0} </b>?",
 				[lang]
 			),
 			async () => {

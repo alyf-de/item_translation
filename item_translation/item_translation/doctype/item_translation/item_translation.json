@@ -60,7 +60,7 @@
  "modified": "2024-08-09 11:40:52.176486",
  "modified_by": "Administrator",
  "module": "Item Translation",
- "name": "Item Description Translation",
+ "name": "Item Translation",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

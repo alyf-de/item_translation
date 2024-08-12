@@ -237,8 +237,8 @@ custom_records = [
 	{
 		"doctype": "DocType Link",
 		"custom": 1,
-		"group": "Description Translation",
-		"link_doctype": "Item Description Translation",
+		"group": "Item Translation",
+		"link_doctype": "Item Translation",
 		"link_fieldname": "item",
 		"name": "gknqets990",
 		"parent": "Item",

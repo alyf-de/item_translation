@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestItemDescriptionTranslationSettings(FrappeTestCase):
+class TestItemTranslation(FrappeTestCase):
 	pass

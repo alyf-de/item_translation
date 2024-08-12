@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class ItemDescriptionTranslationSettings(Document):
+class ItemTranslationSettings(Document):
 	pass
