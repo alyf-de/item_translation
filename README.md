@@ -29,6 +29,12 @@ Fronted only.
 - **Purchase Order**
 - **Purchase Invoice**
 
+### Dependencies
+
+- Frappe
+- ERPNext
+- Tested with ERPNext Version 15
+
 #### License
 
 gpl-3.0
