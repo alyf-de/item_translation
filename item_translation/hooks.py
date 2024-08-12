@@ -32,8 +32,11 @@ app_include_js = ["/assets/item_translation/js/utils.js"]
 # include js in doctype views
 doctype_js = {
 	"Quotation": "public/js/quotation.js",
+	"Purchase Order": "public/js/purchase_order.js",
+	"Purchase Invoice": "public/js/purchase_invoice.js",
 	"Sales Order": "public/js/sales_order.js",
 	"Sales Invoice": "public/js/sales_invoice.js",
+	"Delivery Note": "public/js/delivery_note.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
