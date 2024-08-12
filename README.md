@@ -12,6 +12,8 @@ Create Translations for Item Descriptions and fetch them in Selling Transactions
 
 - **Item Translation Settings**, for Default Language and Display of Notifications
 
+![Item Translation Settings](docs/item_translation_settings.png)
+
 ### How it works:
 
 Alternative Item Descriptions for different languages are stored in Item Translations.
