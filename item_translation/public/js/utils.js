@@ -49,7 +49,7 @@ item_translation.utils = {
 				for (row of frm.doc.items) {
 					// check if description needs to come from normal item or translation
 					if (settings.language != lang) {
-						let res = await frappe.db.get_list("Item Description Translation", {
+						let res = await frappe.db.get_list("Item Translation", {
 							fields: ["name", "language", "description"],
 							filters: { language: lang, item: row.item_code },
 							limit: 1,
