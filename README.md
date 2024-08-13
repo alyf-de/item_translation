@@ -18,7 +18,7 @@ Create Translations for Item Descriptions and fetch them in Selling Transactions
 
 Alternative Item Descriptions for different languages are stored in Item Translations.
 If the print language in a supported transaction does not match the Default Language, Alternative Descriptions are fetched.
-Fronted only.
+Frontend only.
 
 ### Supported transactions
 
@@ -33,7 +33,8 @@ Fronted only.
 
 - Frappe
 - ERPNext
-- Tested with ERPNext Version 15
+
+Tested with ERPNext Version 15
 
 #### License
 
