@@ -34,7 +34,7 @@ Frontend only.
 - Frappe
 - ERPNext
 
-Tested with ERPNext Version 15
+Tested with ERPNext Version 14
 
 #### License
 
