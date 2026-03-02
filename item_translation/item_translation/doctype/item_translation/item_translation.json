@@ -12,6 +12,7 @@
   "infos_section",
   "item",
   "language",
+  "item_name",
   "description"
  ],
  "fields": [
@@ -45,19 +46,24 @@
    "reqd": 1
   },
   {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
    "columns": 4,
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "in_filter": 1,
    "in_global_search": 1,
    "in_list_view": 1,
-   "label": "Description",
-   "reqd": 1
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-09 11:40:52.176486",
+ "modified": "2026-03-02 19:38:01.743000",
  "modified_by": "Administrator",
  "module": "Item Translation",
  "name": "Item Translation",

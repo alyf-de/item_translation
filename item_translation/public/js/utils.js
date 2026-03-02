@@ -8,13 +8,18 @@ item_translation.utils = {
 
 		if (settings.language != lang) {
 			const res = await frappe.db.get_list("Item Translation", {
-				fields: ["name", "language", "description"],
+				fields: ["name", "language", "item_name", "description"],
 				filters: { language: lang, item: row.item_code },
 				limit: 1,
 			});
 			setTimeout(() => {
 				if (res.length > 0) {
-					frappe.model.set_value(cdt, cdn, "description", res[0].description);
+					if (res[0].item_name) {
+						frappe.model.set_value(cdt, cdn, "item_name", res[0].item_name);
+					}
+					if (res[0].description) {
+						frappe.model.set_value(cdt, cdn, "description", res[0].description);
+					}
 				} else if (settings.display_warnings === 1) {
 					frappe.msgprint(
 						__(
@@ -50,17 +55,27 @@ item_translation.utils = {
 					// check if description needs to come from normal item or translation
 					if (settings.language != lang) {
 						let res = await frappe.db.get_list("Item Translation", {
-							fields: ["name", "language", "description"],
+							fields: ["name", "language", "item_name", "description"],
 							filters: { language: lang, item: row.item_code },
 							limit: 1,
 						});
 						if (res.length > 0) {
-							frappe.model.set_value(
-								row.doctype,
-								row.name,
-								"description",
-								res[0].description
-							);
+							if (res[0].item_name) {
+								frappe.model.set_value(
+									row.doctype,
+									row.name,
+									"item_name",
+									res[0].item_name
+								);
+							}
+							if (res[0].description) {
+								frappe.model.set_value(
+									row.doctype,
+									row.name,
+									"description",
+									res[0].description
+								);
+							}
 						} else if (settings.display_warnings == 1) {
 							frappe.msgprint(
 								__(
@@ -71,12 +86,18 @@ item_translation.utils = {
 						}
 					} else {
 						let res = await frappe.db.get_list("Item", {
-							fields: ["name", "description"],
+							fields: ["name", "item_name", "description"],
 							filters: { item_code: row.item_code },
 							limit: 1,
 						});
 
 						if (res.length > 0) {
+							frappe.model.set_value(
+								row.doctype,
+								row.name,
+								"item_name",
+								res[0].item_name
+							);
 							frappe.model.set_value(
 								row.doctype,
 								row.name,
