@@ -1,9 +1,7 @@
 app_name = "item_translation"
 app_title = "Item Translation"
 app_publisher = "ALYF GmbH"
-app_description = (
-	"Create Translations for Item Names and Descriptions and fetch them in Selling Transactions"
-)
+app_description = "Create Translations for Item Names and Descriptions and fetch them in Selling Transactions"
 app_email = "hallo@alyf.de"
 app_license = "gpl-3.0"
 # required_apps = []

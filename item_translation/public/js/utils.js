@@ -47,10 +47,7 @@ item_translation.utils = {
 		const lang = frm.doc.language;
 		const settings = await frappe.db.get_doc("Item Translation Settings");
 		frappe.confirm(
-			__(
-				"Print Language has changed. Refetch Items for language <b> {0} </b>?",
-				[lang]
-			),
+			__("Print Language has changed. Refetch Items for language <b> {0} </b>?", [lang]),
 			async () => {
 				for (const row of frm.doc.items) {
 					if (settings.language != lang) {
@@ -59,10 +56,10 @@ item_translation.utils = {
 							this._apply_translation(row.doctype, row.name, res[0]);
 						} else if (settings.display_warnings == 1) {
 							frappe.msgprint(
-								__(
-									"Translation missing for <b> {0} </b> in language <b> {1}</b>",
-									[row.item_name, lang]
-								)
+								__("Translation missing for <b> {0} </b> in language <b> {1}</b>", [
+									row.item_name,
+									lang,
+								])
 							);
 						}
 					} else {
