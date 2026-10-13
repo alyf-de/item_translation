@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "creation": "2024-06-04 17:47:17.754895",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -33,7 +32,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2026-05-01 14:56:53.095882",
+ "modified": "2026-10-13 19:08:41.853326",
  "modified_by": "Administrator",
  "module": "Item Translation",
  "name": "Item Translation Settings",
@@ -69,7 +68,7 @@
   }
  ],
  "row_format": "Dynamic",
- "sort_field": "modified",
+ "sort_field": "creation",
  "sort_order": "DESC",
  "states": []
 }

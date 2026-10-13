@@ -62,7 +62,7 @@
   }
  ],
  "links": [],
- "modified": "2026-05-01 14:58:23.007562",
+ "modified": "2026-10-13 19:08:41.290964",
  "modified_by": "Administrator",
  "module": "Item Translation",
  "name": "Item Translation",
@@ -101,7 +101,7 @@
   }
  ],
  "row_format": "Dynamic",
- "sort_field": "modified",
+ "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
  "track_changes": 1
