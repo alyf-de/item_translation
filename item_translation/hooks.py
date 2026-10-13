@@ -13,7 +13,7 @@ app_license = "gpl-3.0"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/item_translation/css/item_translation.css"
-app_include_js = ["/assets/item_translation/js/utils.js"]
+app_include_js = "item_translation.bundle.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/item_translation/css/item_translation.css"
